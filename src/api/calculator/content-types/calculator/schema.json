@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calculators",
+  "info": {
+    "singularName": "calculator",
+    "pluralName": "calculators",
+    "displayName": "Calculators",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_services",
+  "info": {
+    "singularName": "our-service",
+    "pluralName": "our-services",
+    "displayName": "Our Services"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
