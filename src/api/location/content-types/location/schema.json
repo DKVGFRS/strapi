@@ -4,7 +4,8 @@
   "info": {
     "singularName": "location",
     "pluralName": "locations",
-    "displayName": "Location"
+    "displayName": "Location",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,18 @@
       "relation": "oneToMany",
       "target": "api::member.member",
       "mappedBy": "location"
+    },
+    "address": {
+      "type": "text"
+    },
+    "POBoxAddress": {
+      "type": "text"
+    },
+    "googleMapsURL": {
+      "type": "string"
+    },
+    "downloadMapURL": {
+      "type": "string"
     }
   }
 }
