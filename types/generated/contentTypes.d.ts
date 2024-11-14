@@ -639,6 +639,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     service: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
+    services: Schema.Attribute.Relation<'manyToMany', 'api::service.service'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -700,7 +701,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'api::service.service'
     > &
       Schema.Attribute.Private;
-    members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
+    members: Schema.Attribute.Relation<'manyToMany', 'api::member.member'>;
     publishedAt: Schema.Attribute.DateTime;
     serviceBio: Schema.Attribute.Text;
     serviceName: Schema.Attribute.String;

@@ -31,8 +31,9 @@
     },
     "members": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::member.member"
+      "relation": "manyToMany",
+      "target": "api::member.member",
+      "inversedBy": "services"
     }
   }
 }
