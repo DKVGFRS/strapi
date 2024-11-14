@@ -60,6 +60,16 @@
     },
     "vCardURL": {
       "type": "string"
+    },
+    "profilePictureLarge": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
