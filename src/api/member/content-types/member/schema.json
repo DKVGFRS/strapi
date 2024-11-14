@@ -51,6 +51,15 @@
     },
     "bioShortText": {
       "type": "text"
+    },
+    "emailURL": {
+      "type": "string"
+    },
+    "linkedinURL": {
+      "type": "string"
+    },
+    "vCardURL": {
+      "type": "string"
     }
   }
 }
