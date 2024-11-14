@@ -610,6 +610,8 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    bioShortText: Schema.Attribute.Text;
+    bioText: Schema.Attribute.Text;
     contact_card_link: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

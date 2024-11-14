@@ -45,6 +45,12 @@
       "relation": "manyToOne",
       "target": "api::job-title.job-title",
       "inversedBy": "members"
+    },
+    "bioText": {
+      "type": "text"
+    },
+    "bioShortText": {
+      "type": "text"
     }
   }
 }
