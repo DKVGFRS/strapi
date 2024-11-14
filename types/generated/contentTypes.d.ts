@@ -534,7 +534,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiLocationLocation extends Struct.SingleTypeSchema {
+export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
     displayName: 'Location';
@@ -546,6 +546,7 @@ export interface ApiLocationLocation extends Struct.SingleTypeSchema {
   };
   attributes: {
     branchName: Schema.Attribute.String;
+    branchTelephoneNumber: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -555,6 +556,7 @@ export interface ApiLocationLocation extends Struct.SingleTypeSchema {
       'api::location.location'
     > &
       Schema.Attribute.Private;
+    members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -585,7 +587,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
       'api::member.member'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
+    location: Schema.Attribute.Relation<'manyToOne', 'api::location.location'>;
     name: Schema.Attribute.String;
     profile_picture: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',

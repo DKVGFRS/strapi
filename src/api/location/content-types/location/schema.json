@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "locations",
   "info": {
     "singularName": "location",
@@ -13,6 +13,15 @@
   "attributes": {
     "branchName": {
       "type": "string"
+    },
+    "branchTelephoneNumber": {
+      "type": "string"
+    },
+    "members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::member.member",
+      "mappedBy": "location"
     }
   }
 }

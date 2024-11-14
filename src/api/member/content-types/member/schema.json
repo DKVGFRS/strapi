@@ -32,13 +32,16 @@
         "audios"
       ]
     },
-    "location": {
-      "type": "string"
-    },
     "service": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service.service"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location.location",
+      "inversedBy": "members"
     }
   }
 }
