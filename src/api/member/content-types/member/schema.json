@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "job_title": {
-      "type": "string"
-    },
     "contact_card_link": {
       "type": "string"
     },
@@ -41,6 +38,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::location.location",
+      "inversedBy": "members"
+    },
+    "job_title": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job-title.job-title",
       "inversedBy": "members"
     }
   }
