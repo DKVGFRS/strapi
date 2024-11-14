@@ -4,7 +4,8 @@
   "info": {
     "singularName": "member",
     "pluralName": "members",
-    "displayName": "Members"
+    "displayName": "Members",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,17 +22,23 @@
       "type": "string"
     },
     "profile_picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "location": {
       "type": "string"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
     }
   }
 }

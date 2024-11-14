@@ -1,20 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "our_services",
+  "collectionName": "services",
   "info": {
-    "singularName": "our-service",
-    "pluralName": "our-services",
-    "displayName": "Our Services"
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Services"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "link": {
+    "serviceName": {
       "type": "string"
     },
     "icon": {
