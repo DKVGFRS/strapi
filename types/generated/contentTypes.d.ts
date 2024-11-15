@@ -705,6 +705,40 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     serviceBio: Schema.Attribute.Text;
     serviceName: Schema.Attribute.String;
+    sub_services: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sub-service.sub-service'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSubServiceSubService extends Struct.CollectionTypeSchema {
+  collectionName: 'sub_services';
+  info: {
+    displayName: 'Sub Services';
+    pluralName: 'sub-services';
+    singularName: 'sub-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sub-service.sub-service'
+    > &
+      Schema.Attribute.Private;
+    longText: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    titleId: Schema.Attribute.UID<'title'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1230,6 +1264,7 @@ declare module '@strapi/strapi' {
       'api::member.member': ApiMemberMember;
       'api::quick-link.quick-link': ApiQuickLinkQuickLink;
       'api::service.service': ApiServiceService;
+      'api::sub-service.sub-service': ApiSubServiceSubService;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

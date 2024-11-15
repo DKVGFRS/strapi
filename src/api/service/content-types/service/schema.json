@@ -34,6 +34,11 @@
       "relation": "manyToMany",
       "target": "api::member.member",
       "inversedBy": "services"
+    },
+    "sub_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sub-service.sub-service"
     }
   }
 }

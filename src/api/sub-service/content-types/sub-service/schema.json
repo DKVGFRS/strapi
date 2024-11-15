@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_services",
+  "info": {
+    "singularName": "sub-service",
+    "pluralName": "sub-services",
+    "displayName": "Sub Services"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "titleId": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "longText": {
+      "type": "text"
+    }
+  }
+}

@@ -75,7 +75,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::service.service",
-      "inversedBy": "members"
+      "mappedBy": "members"
     }
   }
 }
