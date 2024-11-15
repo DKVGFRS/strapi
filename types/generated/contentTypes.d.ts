@@ -650,6 +650,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
 export interface ApiQuickLinkQuickLink extends Struct.CollectionTypeSchema {
   collectionName: 'quick_links';
   info: {
+    description: '';
     displayName: 'Quick Links';
     pluralName: 'quick-links';
     singularName: 'quick-link';
@@ -665,6 +666,7 @@ export interface ApiQuickLinkQuickLink extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    imgURL: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
