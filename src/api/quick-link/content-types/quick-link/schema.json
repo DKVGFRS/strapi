@@ -28,6 +28,9 @@
     },
     "imgURL": {
       "type": "string"
+    },
+    "quickLinkID": {
+      "type": "uid"
     }
   }
 }
