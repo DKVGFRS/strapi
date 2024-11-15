@@ -4,7 +4,8 @@
   "info": {
     "singularName": "quick-link",
     "pluralName": "quick-links",
-    "displayName": "Quick Links"
+    "displayName": "Quick Links",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,18 @@
       "type": "string"
     },
     "icon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "imgURL": {
+      "type": "string"
     }
   }
 }
