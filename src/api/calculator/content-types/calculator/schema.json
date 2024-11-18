@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "calculators",
+  "info": {
+    "singularName": "calculator",
+    "pluralName": "calculators",
+    "displayName": "Calculators"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "calculatorName": {
+      "type": "string"
+    },
+    "iconURL": {
+      "type": "string"
+    }
+  }
+}
