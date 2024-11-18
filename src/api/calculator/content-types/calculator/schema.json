@@ -4,7 +4,8 @@
   "info": {
     "singularName": "calculator",
     "pluralName": "calculators",
-    "displayName": "Calculators"
+    "displayName": "Calculators",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,9 @@
       "type": "string"
     },
     "iconURL": {
+      "type": "string"
+    },
+    "calculatorID": {
       "type": "string"
     }
   }

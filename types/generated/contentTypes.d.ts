@@ -473,6 +473,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiCalculatorCalculator extends Struct.CollectionTypeSchema {
   collectionName: 'calculators';
   info: {
+    description: '';
     displayName: 'Calculators';
     pluralName: 'calculators';
     singularName: 'calculator';
@@ -481,6 +482,7 @@ export interface ApiCalculatorCalculator extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    calculatorID: Schema.Attribute.String;
     calculatorName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
