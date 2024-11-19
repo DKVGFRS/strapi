@@ -15,17 +15,6 @@
     "serviceName": {
       "type": "string"
     },
-    "icon": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "serviceBio": {
       "type": "text"
     },
@@ -39,6 +28,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::sub-service.sub-service"
+    },
+    "iconURL": {
+      "type": "string"
     }
   }
 }
