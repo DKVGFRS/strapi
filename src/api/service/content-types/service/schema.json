@@ -31,6 +31,9 @@
     },
     "iconURL": {
       "type": "string"
+    },
+    "serviceId": {
+      "type": "string"
     }
   }
 }

@@ -738,6 +738,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     members: Schema.Attribute.Relation<'manyToMany', 'api::member.member'>;
     publishedAt: Schema.Attribute.DateTime;
     serviceBio: Schema.Attribute.Text;
+    serviceId: Schema.Attribute.String;
     serviceName: Schema.Attribute.String;
     sub_services: Schema.Attribute.Relation<
       'oneToMany',
