@@ -34,6 +34,9 @@
     },
     "serviceId": {
       "type": "string"
+    },
+    "serviceBodyText": {
+      "type": "richtext"
     }
   }
 }
