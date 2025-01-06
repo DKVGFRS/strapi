@@ -633,7 +633,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
   collectionName: 'members';
   info: {
     description: '';
-    displayName: 'Members';
+    displayName: 'Team Members';
     pluralName: 'members';
     singularName: 'member';
   };
