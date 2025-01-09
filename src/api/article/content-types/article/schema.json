@@ -40,6 +40,9 @@
     },
     "Date": {
       "type": "date"
+    },
+    "bodyText": {
+      "type": "blocks"
     }
   }
 }
