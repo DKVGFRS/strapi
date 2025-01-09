@@ -43,6 +43,9 @@
     },
     "bodyText": {
       "type": "blocks"
+    },
+    "imageUrl": {
+      "type": "string"
     }
   }
 }
