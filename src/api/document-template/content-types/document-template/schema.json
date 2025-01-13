@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "document_templates",
+  "info": {
+    "singularName": "document-template",
+    "pluralName": "document-templates",
+    "displayName": "Document Templates"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "documentTitle": {
+      "type": "string"
+    },
+    "documentFile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
