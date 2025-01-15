@@ -411,6 +411,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    bodyBlock: Schema.Attribute.Blocks;
     bodyText: Schema.Attribute.RichText;
     category: Schema.Attribute.String;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
