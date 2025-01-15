@@ -41,11 +41,11 @@
     "Date": {
       "type": "date"
     },
-    "bodyText": {
-      "type": "blocks"
-    },
     "imageUrl": {
       "type": "string"
+    },
+    "bodyText": {
+      "type": "richtext"
     }
   }
 }
