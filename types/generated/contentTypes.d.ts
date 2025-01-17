@@ -565,6 +565,40 @@ export interface ApiDocumentTemplateDocumentTemplate
   };
 }
 
+export interface ApiEmailBannerEmailBanner extends Struct.CollectionTypeSchema {
+  collectionName: 'email_banners';
+  info: {
+    displayName: 'Email Banner';
+    pluralName: 'email-banners';
+    singularName: 'email-banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    imageUrl: Schema.Attribute.String;
+    legalNoticeUrl: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::email-banner.email-banner'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    redirectUrl: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1328,6 +1362,7 @@ declare module '@strapi/strapi' {
       'api::calculator.calculator': ApiCalculatorCalculator;
       'api::category.category': ApiCategoryCategory;
       'api::document-template.document-template': ApiDocumentTemplateDocumentTemplate;
+      'api::email-banner.email-banner': ApiEmailBannerEmailBanner;
       'api::global.global': ApiGlobalGlobal;
       'api::job-title.job-title': ApiJobTitleJobTitle;
       'api::location.location': ApiLocationLocation;
