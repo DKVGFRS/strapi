@@ -49,6 +49,9 @@
     },
     "bodyBlock": {
       "type": "blocks"
+    },
+    "articleLink": {
+      "type": "string"
     }
   }
 }

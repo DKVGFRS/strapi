@@ -410,6 +410,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articleLink: Schema.Attribute.String;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     bodyBlock: Schema.Attribute.Blocks;
     bodyText: Schema.Attribute.RichText;
