@@ -44,9 +44,6 @@
     "imageUrl": {
       "type": "string"
     },
-    "bodyText": {
-      "type": "richtext"
-    },
     "bodyBlock": {
       "type": "blocks"
     },

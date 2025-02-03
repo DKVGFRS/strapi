@@ -29,11 +29,6 @@
         "audios"
       ]
     },
-    "service": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::service.service"
-    },
     "location": {
       "type": "relation",
       "relation": "manyToOne",
