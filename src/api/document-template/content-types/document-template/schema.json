@@ -26,9 +26,9 @@
         "audios"
       ]
     },
-    "user_type": {
+    "user_types": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::user-type.user-type",
       "inversedBy": "document_templates"
     }

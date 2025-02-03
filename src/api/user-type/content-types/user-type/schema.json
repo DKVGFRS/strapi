@@ -16,9 +16,9 @@
     },
     "document_templates": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::document-template.document-template",
-      "mappedBy": "user_type"
+      "mappedBy": "user_types"
     }
   }
 }

@@ -532,8 +532,8 @@ export interface ApiDocumentTemplateDocumentTemplate
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    user_type: Schema.Attribute.Relation<
-      'manyToOne',
+    user_types: Schema.Attribute.Relation<
+      'manyToMany',
       'api::user-type.user-type'
     >;
   };
@@ -836,7 +836,7 @@ export interface ApiUserTypeUserType extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     document_templates: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::document-template.document-template'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
