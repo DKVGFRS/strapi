@@ -4,7 +4,8 @@
   "info": {
     "singularName": "document-template",
     "pluralName": "document-templates",
-    "displayName": "Document Templates"
+    "displayName": "Document Templates",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,21 @@
       "type": "string"
     },
     "documentFile": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "user_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-type.user-type",
+      "inversedBy": "document_templates"
     }
   }
 }

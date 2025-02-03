@@ -505,6 +505,7 @@ export interface ApiDocumentTemplateDocumentTemplate
   extends Struct.CollectionTypeSchema {
   collectionName: 'document_templates';
   info: {
+    description: '';
     displayName: 'Document Templates';
     pluralName: 'document-templates';
     singularName: 'document-template';
@@ -531,6 +532,10 @@ export interface ApiDocumentTemplateDocumentTemplate
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_type: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::user-type.user-type'
+    >;
   };
 }
 
@@ -813,6 +818,38 @@ export interface ApiSubServiceSubService extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUserTypeUserType extends Struct.CollectionTypeSchema {
+  collectionName: 'user_types';
+  info: {
+    displayName: 'User Type';
+    pluralName: 'user-types';
+    singularName: 'user-type';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    document_templates: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::document-template.document-template'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::user-type.user-type'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    userType: Schema.Attribute.String;
   };
 }
 
@@ -1338,6 +1375,7 @@ declare module '@strapi/strapi' {
       'api::quick-link.quick-link': ApiQuickLinkQuickLink;
       'api::service.service': ApiServiceService;
       'api::sub-service.sub-service': ApiSubServiceSubService;
+      'api::user-type.user-type': ApiUserTypeUserType;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_types",
+  "info": {
+    "singularName": "user-type",
+    "pluralName": "user-types",
+    "displayName": "User Type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userType": {
+      "type": "string"
+    },
+    "document_templates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document-template.document-template",
+      "mappedBy": "user_type"
+    }
+  }
+}
