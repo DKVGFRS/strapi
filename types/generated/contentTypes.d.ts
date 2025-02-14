@@ -634,6 +634,33 @@ export interface ApiJobTitleJobTitle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLegalLegal extends Struct.CollectionTypeSchema {
+  collectionName: 'legals';
+  info: {
+    displayName: 'Legal';
+    pluralName: 'legals';
+    singularName: 'legal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::legal.legal'> &
+      Schema.Attribute.Private;
+    mainLinkUrl: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    pdfUrl: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
@@ -1370,6 +1397,7 @@ declare module '@strapi/strapi' {
       'api::email-banner.email-banner': ApiEmailBannerEmailBanner;
       'api::global.global': ApiGlobalGlobal;
       'api::job-title.job-title': ApiJobTitleJobTitle;
+      'api::legal.legal': ApiLegalLegal;
       'api::location.location': ApiLocationLocation;
       'api::member.member': ApiMemberMember;
       'api::quick-link.quick-link': ApiQuickLinkQuickLink;
