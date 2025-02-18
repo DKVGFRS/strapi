@@ -41,9 +41,6 @@
     "Date": {
       "type": "date"
     },
-    "imageUrl": {
-      "type": "string"
-    },
     "bodyBlock": {
       "type": "blocks"
     },
