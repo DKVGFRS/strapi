@@ -21,9 +21,6 @@
       "target": "api::member.member",
       "inversedBy": "services"
     },
-    "iconURL": {
-      "type": "string"
-    },
     "serviceId": {
       "type": "string"
     },
@@ -31,14 +28,15 @@
       "type": "richtext"
     },
     "iconImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
