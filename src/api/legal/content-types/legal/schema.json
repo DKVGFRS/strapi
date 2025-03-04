@@ -4,7 +4,8 @@
   "info": {
     "singularName": "legal",
     "pluralName": "legals",
-    "displayName": "Legal"
+    "displayName": "Legal",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,6 +19,9 @@
       "type": "string"
     },
     "mainLinkUrl": {
+      "type": "string"
+    },
+    "legal_id": {
       "type": "string"
     }
   }

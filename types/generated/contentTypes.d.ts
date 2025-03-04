@@ -636,6 +636,7 @@ export interface ApiJobTitleJobTitle extends Struct.CollectionTypeSchema {
 export interface ApiLegalLegal extends Struct.CollectionTypeSchema {
   collectionName: 'legals';
   info: {
+    description: '';
     displayName: 'Legal';
     pluralName: 'legals';
     singularName: 'legal';
@@ -647,6 +648,7 @@ export interface ApiLegalLegal extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    legal_id: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::legal.legal'> &
       Schema.Attribute.Private;
