@@ -75,6 +75,9 @@
     },
     "bioURL": {
       "type": "string"
+    },
+    "job_title_display": {
+      "type": "string"
     }
   }
 }

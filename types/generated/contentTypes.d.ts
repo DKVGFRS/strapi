@@ -722,6 +722,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::job-title.job-title'
     >;
+    job_title_display: Schema.Attribute.String;
     linkedinURL: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
