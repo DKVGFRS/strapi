@@ -4,7 +4,8 @@
   "info": {
     "singularName": "job-title",
     "pluralName": "job-titles",
-    "displayName": "Job Title"
+    "displayName": "Job Title",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,9 @@
       "relation": "oneToMany",
       "target": "api::member.member",
       "mappedBy": "job_title"
+    },
+    "titleId": {
+      "type": "integer"
     }
   }
 }

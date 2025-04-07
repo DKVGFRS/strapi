@@ -607,6 +607,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiJobTitleJobTitle extends Struct.CollectionTypeSchema {
   collectionName: 'job_titles';
   info: {
+    description: '';
     displayName: 'Job Title';
     pluralName: 'job-titles';
     singularName: 'job-title';
@@ -626,6 +627,7 @@ export interface ApiJobTitleJobTitle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
     publishedAt: Schema.Attribute.DateTime;
+    titleId: Schema.Attribute.Integer;
     titleName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -689,6 +691,7 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
       'api::location.location'
     > &
       Schema.Attribute.Private;
+    locationId: Schema.Attribute.Integer;
     members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
     POBoxAddress: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;

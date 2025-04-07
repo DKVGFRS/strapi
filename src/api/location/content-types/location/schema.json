@@ -38,6 +38,9 @@
     },
     "docex": {
       "type": "string"
+    },
+    "locationId": {
+      "type": "integer"
     }
   }
 }
