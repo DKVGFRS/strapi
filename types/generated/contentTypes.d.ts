@@ -680,6 +680,7 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    docex: Schema.Attribute.String;
     downloadMapURL: Schema.Attribute.String;
     googleMapsURL: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

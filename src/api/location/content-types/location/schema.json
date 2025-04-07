@@ -35,6 +35,9 @@
     },
     "downloadMapURL": {
       "type": "string"
+    },
+    "docex": {
+      "type": "string"
     }
   }
 }
