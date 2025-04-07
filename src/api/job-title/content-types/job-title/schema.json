@@ -22,7 +22,7 @@
       "mappedBy": "job_title"
     },
     "titleId": {
-      "type": "integer"
+      "type": "string"
     }
   }
 }

@@ -627,7 +627,7 @@ export interface ApiJobTitleJobTitle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
     publishedAt: Schema.Attribute.DateTime;
-    titleId: Schema.Attribute.Integer;
+    titleId: Schema.Attribute.String;
     titleName: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -691,7 +691,7 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
       'api::location.location'
     > &
       Schema.Attribute.Private;
-    locationId: Schema.Attribute.Integer;
+    locationId: Schema.Attribute.String;
     members: Schema.Attribute.Relation<'oneToMany', 'api::member.member'>;
     POBoxAddress: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;

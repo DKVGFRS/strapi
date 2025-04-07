@@ -40,7 +40,7 @@
       "type": "string"
     },
     "locationId": {
-      "type": "integer"
+      "type": "string"
     }
   }
 }
